@@ -13,6 +13,7 @@ pipeline {
             steps {
                 sh """
                 echo "This is for testing"
+                ls -ltrh
                 """
             }
         }
