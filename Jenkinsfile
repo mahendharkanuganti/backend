@@ -9,11 +9,10 @@ pipeline {
     }
 
     stages {
-        stage('Init') {
+        stage('Install Dependencies') {
             steps {
                 sh """
-                echo "This is for testing"
-                ls -ltrh
+                npn install 
                 """
             }
         }
