@@ -11,7 +11,7 @@ pipeline {
         def appVersion = ''   // variable declaration
     }
     stages {
-        stage('read the version'){
+        stage('read the version') {
             steps{
                 script{
                 def packageJson = readJSON file: 'package.json'
@@ -29,8 +29,8 @@ pipeline {
                 """
             }
         }
-        stage{
-            steps{
+        stage('Build') {
+            steps {
                 sh """
                 zip -q -r backend-${appVersion}.zip * -x Jenkinsfile -x backend-${appVersion}.zip
                 ls -ltr
